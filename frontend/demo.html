@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/landing.css" />
     <link rel="stylesheet" href="css/signIn.css" />
     <link
       rel="stylesheet"
@@ -22,6 +23,38 @@
   </head>
   <body>
     <!-- <div class="alan-btn"></div> -->
+    <header class="header">
+      <div class="container flex-between">
+        <div class="logo">
+          <a href="#">
+            <!-- <img
+            src="https://raw.githubusercontent.com/MohamedAridah/frontendmentor_url-shortening-api/main/images/logo.svg"
+            alt=""
+          /> -->
+            <h1>Pukarr</h1>
+          </a>
+        </div>
+        <nav class="main-navgation flex-between flex-ver-top">
+          <div class="nav-links">
+            <a href="./frontend/demo.html">Features</a>
+            <a href="./frontend/Events.html">Events</a>
+            <a href="./frontend/pricing.html">Pricing</a>
+            <a href="./frontend/faqs.html">Resources</a>
+            <a href="./frontend/organization.html">Partners</a>
+            <a href="./frontend/aboutUs.html">About Us</a>
+          </div>
+          <div class="nav-buttons">
+            <a href="./frontend/signIn.html" class="log-in">Login</a>
+            <a href="./frontend/signUp.html" class="sign-up btn btn-sm"
+              >Sign Up</a
+            >
+          </div>
+        </nav>
+        <div class="burger-menu">
+          <i class="fa-regular fa-bars icon"></i>
+        </div>
+      </div>
+    </header>
     <section class="vh-100">
       <div class="container py-5 h-100">
         <div class="row d-flex align-items-center justify-content-center h-100">
@@ -38,13 +71,17 @@
               <div class="row mb-4">
                 <div class="col">
                   <div class="form-outline">
-                    <label class="form-label" for="form3Example1">First name</label>
+                    <label class="form-label" for="form3Example1"
+                      >First name</label
+                    >
                     <input type="text" id="fname" class="form-control" />
                   </div>
                 </div>
                 <div class="col">
                   <div class="form-outline">
-                    <label class="form-label" for="form3Example2">Last name</label>
+                    <label class="form-label" for="form3Example2"
+                      >Last name</label
+                    >
                     <input type="text" id="lname" class="form-control" />
                   </div>
                 </div>
@@ -61,12 +98,12 @@
               </div>
 
               <!-- Phone Number Input -->
-                <div class="form-outline mb-4">
-                    <label class="form-label" for="form6Example6">Phone</label>
-                    <input type="number" id="Phone" class="form-control" />
-                </div>
+              <div class="form-outline mb-4">
+                <label class="form-label" for="form6Example6">Phone</label>
+                <input type="number" id="Phone" class="form-control" />
+              </div>
 
-                <!-- Location Input -->
+              <!-- Location Input -->
               <div class="form-outline mb-4">
                 <label class="form-label" for="location">Location</label>
                 <input
@@ -75,57 +112,75 @@
                   class="form-control form-control-lg"
                 />
               </div>
-            
 
               <!-- Qualification Input -->
               <div class="form-outline mb-4">
-                  <label class="form-label" for="location">Highest Qualification Pursuing</label>
-                <select id="qualification" type="qualification" class="browser-default custom-select">
-                    <option value="" disabled selected hidden>--Select Here--</option>
-                    <option value="1">High School</option>
-                    <option value="2">Under Graduate</option>
-                    <option value="3">Post Graduate</option>
+                <label class="form-label" for="location"
+                  >Highest Qualification Pursuing</label
+                >
+                <select
+                  id="qualification"
+                  type="qualification"
+                  class="browser-default custom-select"
+                >
+                  <option value="" disabled selected hidden>
+                    --Select Here--
+                  </option>
+                  <option value="1">High School</option>
+                  <option value="2">Under Graduate</option>
+                  <option value="3">Post Graduate</option>
                 </select>
               </div>
-
 
               <!-- Research Domain Input -->
               <div class="form-outline mb-4">
                 <label class="form-label" for="location">Research Domain</label>
-                <select id="domain" type="research-domain" class="browser-default custom-select">
-                    <option value="" disabled selected hidden>--Select Here--</option>
-                    <option value="1">hello</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
+                <select
+                  id="domain"
+                  type="research-domain"
+                  class="browser-default custom-select"
+                >
+                  <option value="" disabled selected hidden>
+                    --Select Here--
+                  </option>
+                  <option value="1">hello</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
                 </select>
               </div>
 
               <!-- organization input -->
               <div class="form-outline mb-4">
-                <label class="form-label" for="location">Organization Name</label>
-                <select id="organization" type="organization" class="browser-default custom-select" aria-placeholder="">
-                    <option value="" disabled selected hidden>--Select Here--</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
+                <label class="form-label" for="location"
+                  >Organization Name</label
+                >
+                <select
+                  id="organization"
+                  type="organization"
+                  class="browser-default custom-select"
+                  aria-placeholder=""
+                >
+                  <option value="" disabled selected hidden>
+                    --Select Here--
+                  </option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
                 </select>
               </div>
 
               <!-- Research Paper Input -->
               <div class="form-outline mb-4">
-                <label for="myfile">Upload Your Published Research Paper : </label>
-                <input type="file" id="research_ppr" name="myfile">
+                <label for="myfile"
+                  >Upload Your Published Research Paper :
+                </label>
+                <input type="file" id="research_ppr" name="myfile" />
               </div>
-
 
               <!-- Submit button -->
               <button type="submit" class="btn btn-primary btn-lg btn-block">
                 Submit
               </button>
-
-             
-
-              
             </form>
           </div>
         </div>

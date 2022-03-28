@@ -4,6 +4,7 @@ var email;
 function submitForm(e) {
     e.preventDefault();
     email = getTnputValue('subscribedEmail');
+    console.log(email);
     var today = new Date();
     var currentdate = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
     saveMessage(email, currentdate);
@@ -14,14 +15,14 @@ function getTnputValue(id) {
 }
 
 function sendEmail(subscribedUser) {
-    let users = [subscribedUser];
+    // let users = [subscribedUser];
     firebase.auth().onAuthStateChanged(function (user) {
         if (user) {
-            for (let i = 0; i < users.length; i++) {
-                db.collection("subscribedUsers").doc(users[i].get().then((doc) => {
+            for (let i = 0; i < subscribedUser.length; i++) {
+                db.collection("subscribedUsers").doc(subcribedUser[i]).get().then((doc) => {
                     Email.send({
                         //Host: "smtp.gmail.com",
-                        SecureToken: "10263b94-1b8b-42c2-b83c-ff155e980fc5",
+                        SecureToken: "4ac43b13-87bf-48c4-9968-cff89a276b5f",
                         To: doc.data().email,
                         From: "aashma.2008@gmail.com",
                         Subject: "Thankyou for contacting ResGrant",
@@ -31,7 +32,7 @@ function sendEmail(subscribedUser) {
                     }).catch(function (error) {
                         console.log("Error sending email: " + error);
                     });
-                }));
+                });
             }
         }
     });
