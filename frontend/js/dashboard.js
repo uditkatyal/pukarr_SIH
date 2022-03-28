@@ -42,7 +42,7 @@ window.addEventListener("resize", function () {
 var slideNavDropdown = $(".sidebar-dropdown");
 
 $(".sidebar .categories").addEventListener("click", function (event) {
-	event.preventDefault();
+	// event.preventDefault();
 
 	const item = event.target.closest(".has-dropdown");
 
