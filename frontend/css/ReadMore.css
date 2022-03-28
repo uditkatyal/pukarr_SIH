@@ -1,0 +1,277 @@
+@import url("https://fonts.googleapis.com/css2?family=Dongle:wght@300;400;700&family=Nanum+Gothic:wght@400;700;800&family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Noto Sans", sans-serif;
+	color: #001219;
+	background-color: white;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+	padding-top: 104px;
+}
+
+h1,
+h2,
+h3,
+h4 {
+	font-family: "Nanum Gothic", sans-serif;
+}
+
+.logo a {
+	font-family: "Dongle", sans-serif;
+}
+
+.container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.header {
+	background-color: #fff;
+	box-shadow: 1px 3px 4px 0 rgba(0, 0, 0, 0.1);
+	position: fixed;
+	top: 0;
+	left: 0;
+	padding: 5px;
+	width: 100%;
+	z-index: 3;
+}
+
+.header ul {
+	list-style: none; /* remove bullets */
+	overflow: hidden; /* better layout control */
+}
+
+.header li a {
+	color: #000;
+	display: block;
+	padding: 10px 10px;
+	text-decoration: none;
+	transition: color 0.3s, background-color 0.5s, border-right 0.3s,
+		border-radius 0.3s ease-in; /* animate hover */
+}
+
+.header li a:hover {
+	color: #fff;
+	background-color: #ca6702;
+	border: none;
+	border-right: 1px solid #ca6702;
+	border-radius: 5px;
+}
+
+.header .logo {
+	color: #ca6702;
+	display: block;
+	float: left;
+	font-size: 2em;
+	padding: 10px 20px;
+	text-decoration: none;
+}
+
+/* menu */
+
+.header .menu {
+	clear: both;
+	max-height: 0;
+	transition: max-height 0.2s ease-out;
+}
+
+/* menu icon */
+
+.header .menu-icon {
+	cursor: pointer;
+	display: inline-block;
+	float: right;
+	padding: 28px 20px;
+	position: relative;
+	user-select: none;
+}
+
+.header .menu-icon .navicon {
+	background: #333;
+	display: block;
+	height: 2px;
+	position: relative;
+	transition: background 0.2s ease-out;
+	width: 18px;
+}
+
+.header .menu-icon .navicon:before,
+.header .menu-icon .navicon:after {
+	background: #333;
+	content: "";
+	display: block;
+	height: 100%;
+	position: absolute;
+	transition: all 0.2s ease-out;
+	width: 100%;
+}
+
+.header .menu-icon .navicon:before {
+	top: 5px;
+}
+
+.header .menu-icon .navicon:after {
+	top: -5px;
+}
+
+/* menu btn */
+
+.header .menu-btn {
+	display: none;
+}
+
+.header .menu-btn:checked ~ .menu {
+	max-height: 240px;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon {
+	background: transparent;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:before {
+	transform: rotate(-45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:after {
+	transform: rotate(45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+	top: 0;
+}
+
+/* 48em = 768px */
+
+@media (min-width: 48em) {
+	.header li {
+		float: left;
+	}
+	.header li a {
+		padding: 20px 30px;
+	}
+	.header .menu {
+		clear: none;
+		float: right;
+		max-height: none;
+	}
+	.header .menu-icon {
+		display: none;
+	}
+}
+
+.blog {
+	width: 75%;
+	margin: 100px 50px;
+	padding: 10px;
+}
+
+.blog .thumbnail {
+	margin-bottom: 10px;
+}
+
+.blog .date,
+.content .date {
+	display: inline-block;
+	margin: 5px;
+	padding: 5px;
+	font-weight: bold;
+}
+
+.blog h3,
+.content h4 {
+	margin: 5px;
+	padding: 5px;
+	color: #6732ff;
+	font-size: 2.5rem;
+	font-weight: bolder;
+}
+
+.blog p {
+	line-height: 1.5em;
+	letter-spacing: 1px;
+	padding: 3px;
+}
+
+.blog-button {
+	display: inline-block;
+	padding: 20px;
+	text-decoration: none;
+}
+
+.side-bar {
+	width: auto;
+}
+
+.side-bar .thumb {
+	margin-top: 15px;
+}
+
+.commented-post h3,
+.recent-posts h3 {
+	margin: 5px;
+}
+
+.commented-post p,
+.recent-posts p {
+	line-height: 1.5em;
+	letter-spacing: 1px;
+	padding: 8px;
+}
+
+.comment-button,
+.recent-button {
+	display: inline-block;
+	margin: 10px;
+	padding: 20px;
+	text-decoration: none;
+}
+
+.blog-button,
+.comment-button,
+.recent-button {
+	background-color: #f1faee;
+	padding: 10px 15px;
+	border: none;
+	border-radius: 20%;
+	box-shadow: 1px 3px 4px 0 rgba(0, 0, 0, 0.1);
+	transition: color 0.3s, background-color 0.2s, border-radius 0.3s ease-in-out;
+}
+
+.blog-button:hover,
+.comment-button:hover,
+.recent-button:hover {
+	color: #000;
+	background-color: #fca751;
+	border-radius: 40%;
+}
+
+footer {
+	font-size: 18px;
+	background-color: #fff;
+	margin-top: 20px;
+	padding: 5px;
+	width: 100%;
+}
+
+/* 48em = 768px */
+
+@media (max-width: 48em) {
+	.container {
+		display: flex;
+		flex-direction: column;
+		margin: 0 auto;
+	}
+}
