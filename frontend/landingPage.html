@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PUKARR</title>
+  <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="./css/landing.css" />
+</head>
+
+<body>
+  <main class="main">
+    <!-- Header -->
+    <header class="header">
+      <div class="container flex-between">
+        <div class="logo">
+          <a href="#">
+            <!-- <img
+                src="https://raw.githubusercontent.com/MohamedAridah/frontendmentor_url-shortening-api/main/images/logo.svg"
+                alt=""
+              /> -->
+            <h1>Pukarr</h1>
+          </a>
+        </div>
+        <nav class="main-navgation flex-between flex-ver-top">
+          <div class="nav-links">
+            <a href="#features">Features</a>
+            <a href="#features">Events</a>
+            <a href="pricing.html">Pricing</a>
+            <a href="#resources">Resources</a>
+            <a href="organization.html">Partners</a>
+            <a href="aboutUs.html">About Us</a>
+          </div>
+          <div class="nav-buttons">
+            <a href="signIn.html" class="log-in">Login</a>
+            <a href="signIn.html" class="sign-up btn btn-sm">Sign Up</a>
+          </div>
+        </nav>
+        <div class="burger-menu">
+          <i class="fa-regular fa-bars icon"></i>
+        </div>
+      </div>
+    </header>
+    <!-- Landing -->
+    <section class="landing">
+      <div class="landing-text">
+        <h1>Discover the best Research Grant</h1>
+        <p>
+          One stop solution for students finding Research Grants in their
+          domain.
+        </p>
+        <a href="./signIn.html" class="btn btn-lg">Get Started</a>
+      </div>
+      <div class="landing-image">
+        <!-- <img
+            src="https://raw.githubusercontent.com/MohamedAridah/frontendmentor_url-shortening-api/main/images/illustration-working.svg"
+            alt="Working Illustration"
+          /> -->
+        <img src="./images/illustration_1.svg" alt="Working Illustration" />
+      </div>
+    </section>
+    <!-- Features -->
+    <section class="features" id="features">
+      <div class="container">
+        <!-- Short URL Feature -->
+        <div class="url-shorten-feature">
+          <form class="url-shorten-form" id="Subscriptionform">
+            <div>
+              <input type=" email" class="url-input" placeholder="Subscribe for grant updates..." autocomplete="off"
+                id="subscribedEmail" />
+              <!-- <span class="alert"></span> -->
+            </div>
+            <button type="submit" class="btn btn-lg btn-plus-icon" id="submit">
+              Subscribe
+            </button>
+          </form>
+          <div class="url-shorten-results"></div>
+        </div>
+        <!-- Advanced Features -->
+        <div class="more-features">
+          <div class="section-header">
+            <h2>What makes us different?</h2>
+            <p>
+              Empowering students to manage and track their research grants
+              with full efficiency and transparency.
+            </p>
+          </div>
+          <div class="more-features-content">
+            <div class="feature">
+              <div class="feature-illustration">
+                <img
+                  src="https://raw.githubusercontent.com/MohamedAridah/frontendmentor_url-shortening-api/main/images/icon-brand-recognition.svg"
+                  alt="Feature Illustration Icon" />
+              </div>
+              <div class="feature-details">
+                <h3>Tracking Grants</h3>
+                <p>
+                  Boost your brand recognition with each click. Generic links
+                  don’t mean a thing. Branded links help instil confidence in
+                  your content.
+                </p>
+              </div>
+            </div>
+            <div class="feature">
+              <div class="feature-illustration">
+                <img
+                  src="https://raw.githubusercontent.com/MohamedAridah/frontendmentor_url-shortening-api/main/images/icon-detailed-records.svg"
+                  alt="Feature Illustration Icon" />
+              </div>
+              <div class="feature-details">
+                <h3>Efficiency</h3>
+                <p>
+                  Gain insights into who is clicking your links. Knowing when
+                  and where people engage with your content helps inform
+                </p>
+              </div>
+            </div>
+            <div class="feature">
+              <div class="feature-illustration">
+                <img
+                  src="https://raw.githubusercontent.com/MohamedAridah/frontendmentor_url-shortening-api/main/images/icon-fully-customizable.svg"
+                  alt="Feature Illustration Icon" />
+              </div>
+              <div class="feature-details">
+                <h3>Configurability</h3>
+                <p>
+                  Improve brand awareness and content discoverability through
+                  customizable links, supercharging audience engagement.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div style="margin-top: -100px" class="more-features-content">
+            <div class="feature">
+              <div class="feature-illustration">
+                <!-- <img
+                    src="https://raw.githubusercontent.com/MohamedAridah/frontendmentor_url-shortening-api/main/images/icon-brand-recognition.svg"
+                    alt="Feature Illustration Icon"
+                  /> -->
+                <i style="font-size: 35px; color: #2bd0d0" class="bx bx-cube"></i>
+              </div>
+              <div class="feature-details">
+                <h3>Transparency</h3>
+                <p>
+                  Boost your brand recognition with each click. Generic links
+                  don’t mean a thing. Branded links help instil confidence in
+                  your content.
+                </p>
+              </div>
+            </div>
+            <div class="feature">
+              <div class="feature-illustration">
+                <!-- <img
+                    src="https://raw.githubusercontent.com/MohamedAridah/frontendmentor_url-shortening-api/main/images/icon-detailed-records.svg"
+                    alt="Feature Illustration Icon"
+                  /> -->
+                <i style="font-size: 35px; color: #2bd0d0" class="bx bxs-report"></i>
+              </div>
+              <div class="feature-details">
+                <h3>Report Builder</h3>
+                <p>
+                  Gain insights into who is clicking your links. Knowing when
+                  and where people engage with your content helps inform
+                </p>
+              </div>
+            </div>
+            <div class="feature">
+              <div class="feature-illustration">
+                <!-- <img
+                    src="https://raw.githubusercontent.com/MohamedAridah/frontendmentor_url-shortening-api/main/images/icon-fully-customizable.svg"
+                    alt="Feature Illustration Icon"
+                  /> -->
+                <i style="font-size: 35px; color: #2bd0d0" class="bx bx-customize"></i>
+              </div>
+              <div class="feature-details">
+                <h3>Fully Customizable</h3>
+                <p>
+                  Improve brand awareness and content discoverability through
+                  customizable links, supercharging audience engagement.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Pricing -->
+    <section class="pricing" id="pricing">
+      <div class="container">
+        <div class="section-header">
+          <h2>Boost your Researches today!</h2>
+          <a href="#" class="btn btn-lg">Get Started</a>
+        </div>
+      </div>
+    </section>
+    <!-- Footer -->
+    <footer class="footer" id="resources">
+      <div class="container">
+        <!-- Website Logo -->
+        <div class="logo">
+          <a href="#">
+            <!-- <img
+                src="https://raw.githubusercontent.com/MohamedAridah/frontendmentor_url-shortening-api/main/images/logo.svg"
+                alt=""
+              /> -->
+            <h1 style="color: white">PUKARR</h1>
+          </a>
+        </div>
+        <!-- Quick Links -->
+        <div class="quick-links">
+          <div class="links-group">
+            <span>Features</span>
+            <div>
+              <a href="#">Events</a>
+              <a href="#">Pricing</a>
+              <a href="#">Analytics</a>
+            </div>
+          </div>
+          <div class="links-group">
+            <span>Resources</span>
+            <div>
+              <a href="#">Blog</a>
+              <a href="#">Developers</a>
+              <a href="#">Support</a>
+            </div>
+          </div>
+          <div class="links-group">
+            <span>Company</span>
+            <div>
+              <a href="#">About</a>
+              <a href="#">Our Team</a>
+              <a href="#">Careers</a>
+              <a href="#">Contact</a>
+            </div>
+          </div>
+        </div>
+        <!-- Social Media -->
+        <div class="social-media">
+          <a href="#">
+            <img
+              src="https://raw.githubusercontent.com/MohamedAridah/frontendmentor_url-shortening-api/main/images/icon-facebook.svg"
+              alt="Facebook Logo" />
+          </a>
+          <a href="#">
+            <img
+              src="https://raw.githubusercontent.com/MohamedAridah/frontendmentor_url-shortening-api/main/images/icon-twitter.svg"
+              alt="Twitter Logo" />
+          </a>
+          <a href="#">
+            <img
+              src="https://raw.githubusercontent.com/MohamedAridah/frontendmentor_url-shortening-api/main/images/icon-pinterest.svg"
+              alt="Pinterest Logo" />
+          </a>
+          <a href="#">
+            <img
+              src="https://raw.githubusercontent.com/MohamedAridah/frontendmentor_url-shortening-api/main/images/icon-instagram.svg"
+              alt="Instagram Logo" />
+          </a>
+        </div>
+      </div>
+      <!-- Made By -->
+      <div class="attribution">
+        Made with
+        <a href="https://www.frontendmentor.io?ref=challenge" class="outer-link" target="_blank">love</a>
+        by team<span class="outer-link"> pukaar</span>.
+        <ul class="social-media">
+          <li>
+            <a href="https://www.codepen.io/FedLover" title="go To My Codepen Account">
+              <i class="fa-brands fa-codepen icon"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+  </main>
+  <script src="https://unpkg.com/boxicons@2.1.2/dist/boxicons.js"></script>
+</body>
+<!-- firebase scripts -->
+<script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-firestore.js"></script>
+<script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+<link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
+<script src="./js/firebaseConfig.js"></script>
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+
+<script src="./js/subscription.js"></script>
+
+</html>

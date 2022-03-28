@@ -1,0 +1,23 @@
+{
+  "name": "pukarr_sih",
+  "version": "1.0.0",
+  "description": "research grant platform",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uditkatyal/pukarr_SIH.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/uditkatyal/pukarr_SIH/issues"
+  },
+  "homepage": "https://github.com/uditkatyal/pukarr_SIH#readme",
+  "dependencies": {
+    "firebase": "^9.6.10"
+  }
+}
