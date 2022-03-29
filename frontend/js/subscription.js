@@ -14,16 +14,16 @@ function getTnputValue(id) {
     return document.getElementById(id).value;
 }
 
-function sendEmail(subscribedUser) {
+function sendEmail(subscribedUser, email) {
     // let users = [subscribedUser];
     firebase.auth().onAuthStateChanged(function (user) {
         if (user) {
             for (let i = 0; i < subscribedUser.length; i++) {
-                db.collection("subscribedUsers").doc(subcribedUser[i]).get().then((doc) => {
+                db.collection("subscribedUsers").doc(subscribedUser[i]).get().then((doc) => {
                     Email.send({
-                        //Host: "smtp.gmail.com",
+                        Host: "smtp.gmail.com",
                         SecureToken: "4ac43b13-87bf-48c4-9968-cff89a276b5f",
-                        To: doc.data().email,
+                        To: email,
                         From: "aashma.2008@gmail.com",
                         Subject: "Thankyou for contacting ResGrant",
                         Body: "We will reach out to you soon!"
@@ -48,7 +48,7 @@ function saveMessage(email, currentdate) {
                 date: currentdate
             }).then(function () {
                 console.log("New user added to firestore");
-                sendEmail(user.uid);
+                sendEmail(user.uid, email);
                 var alertstr = "thank you for subscribing";
                 alert(alertstr);
             }).catch(function (error) {
