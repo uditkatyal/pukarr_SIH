@@ -20,8 +20,8 @@ function sendEmail(subscribedUser, email) {
             for (let i = 0; i < subscribedUser.length; i++) {
                 db.collection("subscribedUsers").doc(subscribedUser[i]).get().then((doc) => {
                     Email.send({
-                        Host: "smtp.gmail.com",
-                        SecureToken: "4ac43b13-87bf-48c4-9968-cff89a276b5f",
+                        Host: "smtp.elasticemail.com",
+                        SecureToken: "24fe7cc3-135a-41e4-9d44-3b24b52bb560",
                         To: email,
                         From: "kashish.989392@gmail.com",
                         Subject: "Thankyou for contacting ResGrant",
