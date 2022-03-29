@@ -28,11 +28,12 @@
     <i class="uil-bars close-aside d-md-none d-lg-none" data-close="show-side-navigation1"></i>
     <div class="sidebar-header d-flex justify-content-center align-items-center px-3 py-4">
       <img class="rounded-pill img-fluid" width="65"
-        src="https://uniim1.shutterfly.com/ng/services/mediarender/THISLIFE/021036514417/media/23148907008/medium/1501685726/enhance"
-        alt="">
+        src="https://img.icons8.com/cotton/344/gender-neutral-user--v1.png"
+        alt="user Icon">
+
       <div class="ms-2">
         <h5 class="fs-6 mb-0">
-          <p id="name" class="text-decoration-none"></p>
+          <h4 id="name" ></h4>
         </h5>
         <p id="location" class="mt-1 mb-0"></p>
       </div>
@@ -62,7 +63,7 @@
         <i class="uil-panel-add"></i><a href="./demo.html">Search Grants</a>
       </li>
       <li class="">
-        <i class="uil-folder"></i><a href="#">File Manager</a>
+        <i   class="uil-folder" ></i><a href="#" id="tap" onclick="addFile()">File Manager</a>
       </li>
       <li class="has-dropdown">
         <i class="uil-calendar-alt"></i><a href="#">Grant Types</a>
@@ -199,14 +200,21 @@
     </nav>
 
     <div class="p-4">
-      <div class="welcome">
+      
+        <div class="welcome">
         <div class="content rounded-3 p-3">
           <h1 class="fs-3">Welcome to ResGrant Dashboard</h1>
-          <p class="mb-0">Hello Beluga, Welcome to your World of Grants!</p>
+          <p id="greet" class="mb-0"> </p>
         </div>
+        </div>
+
+        <div style="display: none;" id="file" >
+          <iframe src=".\pdf\ResearchPaper.pdf" width="100%" height="500px">
+          </iframe>
       </div>
 
-      <section class="statistics mt-4">
+      <div id="grantInfo">  
+        <section class="statistics mt-4">
         <div class="row">
           <div class="col-lg-6">
             <div class="box d-flex rounded-2 align-items-center mb-4 mb-lg-0 p-3">
@@ -214,9 +222,9 @@
               <i class="fa-solid fa-envelope fs-2 text-center icon-back rounded-circle"></i>
               <div class="ms-3">
                 <div class="d-flex align-items-center">
-                  <h3 class="mb-0">364</h3> <span class="d-block ms-2">New Grants Application</span>
+                  <h3 id="Applications" class="mb-0">364</h3> <span class="d-block ms-2">New Grants Application</span>
                 </div>
-                <p class="fs-normal mb-0">Lorem ipsum dolor sit amet</p>
+                <p class="fs-normal mb-0"></p>
               </div>
             </div>
           </div>
@@ -226,9 +234,9 @@
               <i class="fa-solid fa-file fs-2 text-center icon-back rounded-circle"></i>
               <div class="ms-3">
                 <div class="d-flex align-items-center">
-                  <h3 class="mb-0">3</h3> <span class="d-block ms-2">Grant Offered</span>
+                  <h3 id="offered" class="mb-0">3</h3> <span class="d-block ms-2">Grant Offered</span>
                 </div>
-                <p class="fs-normal mb-0">Lorem ipsum dolor sit amet</p>
+                <p style="color:blue" class="fs-normal mb-0"> You are being noticed.</p>
               </div>
             </div>
           </div>
@@ -239,9 +247,9 @@
               <!-- <i class="uil-users-alt fs-2 text-center icon-back rounded-circle"></i> -->
               <div class="ms-3">
                 <div class="d-flex align-items-center">
-                  <h3 class="mb-0">4</h3> <span class="d-block ms-2">Grant Awarded</span>
+                  <h3 id="awarded" class="mb-0">4</h3> <span class="d-block ms-2">Grant Awarded</span>
                 </div>
-                <p class="fs-normal mb-0">Lorem ipsum dolor sit amet</p>
+                <p style="color:rgb(40, 150, 49)" class="fs-normal mb-0">Kudos! </p>
               </div>
             </div>
           </div>
@@ -257,14 +265,15 @@
               <!-- <i class="fa-solid fa-money-bill-simple fs-2 text-center icon-back rounded-circle"></i> -->
               <div class="ms-3">
                 <div class="d-flex align-items-center">
-                  <h3 class="mb-0">53%</h3> <span class="d-block ms-2">Buget Alloted</span>
+                  <h3 id="budget" class="mb-0"></h3> <span class="d-block ms-2">Budget Alloted</span>
                 </div>
-                <p class="fs-normal mb-0">Lorem ipsum dolor sit amet</p>
+                <p style="color:blue"class="fs-normal mb-0 ">Your current alloted budget.</p>
               </div>
             </div>
           </div>
         </div>
-      </section>
+        </section>
+      </div>
 
       <section class="charts mt-4">
         <div class="row">
@@ -298,8 +307,8 @@
                     alt="admin">
                 </div>
                 <div class="ms-3">
-                  <h3 class="fs-5 mb-1">Joge Lucky</h3>
-                  <p class="mb-0">Lorem ipsum dolor sit amet consectetur elit.</p>
+                  <h3 id="cons1" class="fs-5 mb-1"></h3>
+                  <p class="mb-0">Authorised mentor by MEITY.</p>
                 </div>
               </div>
               <div class="admin d-flex align-items-center rounded-2 p-3 mb-4">
@@ -309,8 +318,8 @@
                     alt="admin">
                 </div>
                 <div class="ms-3">
-                  <h3 class="fs-5 mb-1">Loria Peris</h3>
-                  <p class="mb-0">Lorem ipsum dolor sit amet consectetur elit.</p>
+                  <h3 id="cons2" class="fs-5 mb-1"></h3>
+                  <p class="mb-0">Authorised mentor by AICTE.</p>
                 </div>
               </div>
               <!-- <div class="admin d-flex align-items-center rounded-2 p-3">
@@ -431,85 +440,8 @@
       <script src="./js/firebaseConfig.js"></script>
       <script src="./js/fetch.js"></script>
 
-      <footer class="footer" id="resources" style="margin-top: 44px;">
-        <div class="container">
-          <!-- Website Logo -->
-          <div class="logo">
-            <a href="#">
-              <!-- <img
-                src="https://raw.githubusercontent.com/MohamedAridah/frontendmentor_url-shortening-api/main/images/logo.svg"
-                alt=""
-              /> -->
-              <h1 style="color: white">PUKARR</h1>
-            </a>
-          </div>
-          <!-- Quick Links -->
-          <div class="quick-links">
-            <div class="links-group">
-              <span>Features</span>
-              <div>
-                <a href="./Events.html">Events</a>
-                <a href="./pricing.html">Pricing</a>
-                <!-- <a href="#">Analytics</a> -->
-              </div>
-            </div>
-            <div class="links-group">
-              <span>Resources</span>
-              <div>
-                <a href="./ReadMore.html">Blog</a>
-                <a href="./aboutUs.html">Developers</a>
-                <a href="./organization.html">Support</a>
-              </div>
-            </div>
-            <div class="links-group">
-              <span>Company</span>
-              <div>
-                <a href="./aboutUs.html">About</a>
-                <a href="./aboutUs.html">Our Team</a>
-                <a href="./Events.html">Careers</a>
-                <a href="./Contact.html
-                ">Contact</a>
-              </div>
-            </div>
-          </div>
-          <!-- Social Media -->
-          <div class="social-media">
-            <a href="#">
-              <img
-                src="https://raw.githubusercontent.com/MohamedAridah/frontendmentor_url-shortening-api/main/images/icon-facebook.svg"
-                alt="Facebook Logo" />
-            </a>
-            <a href="#">
-              <img
-                src="https://raw.githubusercontent.com/MohamedAridah/frontendmentor_url-shortening-api/main/images/icon-twitter.svg"
-                alt="Twitter Logo" />
-            </a>
-            <a href="#">
-              <img
-                src="https://raw.githubusercontent.com/MohamedAridah/frontendmentor_url-shortening-api/main/images/icon-pinterest.svg"
-                alt="Pinterest Logo" />
-            </a>
-            <a href="#">
-              <img
-                src="https://raw.githubusercontent.com/MohamedAridah/frontendmentor_url-shortening-api/main/images/icon-instagram.svg"
-                alt="Instagram Logo" />
-            </a>
-          </div>
-        </div>
-        <!-- Made By -->
-        <div class="attribution">
-          Made with
-          <a href="https://www.frontendmentor.io?ref=challenge" class="outer-link" target="_blank">love</a>
-          by team<span class="outer-link"> pukaar</span>.
-          <ul class="social-media">
-            <li>
-              <a href="https://www.codepen.io/FedLover" title="go To My Codepen Account">
-                <i class="fa-brands fa-codepen icon"></i>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </footer>
+      
+       
 </body>
 
 </html>
