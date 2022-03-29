@@ -326,10 +326,20 @@
             console.log("Dashboard");
             window.location.replace("./frontend/signIn.html");
           }
+          if (commandData.command === "getPartners") {
+            //call client code that will react on the received command
+            console.log("Developers");
+            window.location.replace("./frontend/organization.html");
+          }
           if (commandData.command === "getPricing") {
             //call client code that will react on the received command
             console.log("Pricing");
             window.location.replace("./frontend/pricing.html");
+          }
+          if (commandData.command === "getDevelopers") {
+            //call client code that will react on the received command
+            console.log("Developers");
+            window.location.replace("./frontend/aboutUs.html");
           }
         },
         rootEl: document.getElementById("alan-btn"),
