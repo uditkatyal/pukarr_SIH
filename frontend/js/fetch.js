@@ -12,17 +12,22 @@ firebase.auth().onAuthStateChanged(user => {
                         console.log(data.name);
                         // console.log($("#name"));
                         $("#name").text(data.name)
-                        // $("#location").text(data.location);
-                        // $("#Applications").text(data.Applications);
-                        // $("#offered").text(data.offered);
-                        // $("#awarded").text(data.awarded);
-                        // $("#budget").text(data.budget);
+                        $("#location").text(data.location);
+                        $("#greet").text("Hello "+data.name+", Welcome to your World of Grants!")
+                        $("#Applications").text(data.Applications);
+                        $("#offered").text(data.offered);
+                        $("#awarded").text(data.awarded);
+                        $("#budget").text(data.budget+" %");
+                        $("#cons1").text(data.consultant1);
+                        $("#cons2").text(data.consultant2);
+
                     }
                 });
             });
         });
     }
 })
+
 
 
 $(document).ready(function () {
@@ -46,3 +51,16 @@ $(document).ready(function () {
     redirect("./sign.in");
 });
 
+
+
+    function addFile(){
+        var x = document.getElementById("file");
+        
+          x.style.display = "block";  
+    
+        var y = document.getElementById("grantInfo");
+        y.style.display="none";
+    }
+    
+   
+   // document.getElementById("tap").onclick = addFile;
