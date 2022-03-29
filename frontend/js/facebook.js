@@ -9,7 +9,8 @@ function facebookProvider() {
 
     // [START auth_facebook_provider_params]
     provider.setCustomParameters({
-        'display': 'popup'
+        // 'display': 'popup'
+        'login_hint': 'user@example.com'
     });
     // [END auth_facebook_provider_params]
 }
