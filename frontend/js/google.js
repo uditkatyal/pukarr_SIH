@@ -99,7 +99,14 @@ function onSignIn(googleUser) {
             // Build Firebase credential with the Google ID token.
             var credential = firebase.auth.GoogleAuthProvider.credential(
                 googleUser.getAuthResponse().id_token);
-
+            if (authResult.additionalUserInfo.isNewUser) {
+                db.collection("users").doc(user.uid).set({
+                    name: user.displayName,
+                    email: user.email
+                }).then(function () {
+                    console.log("New user added to firestore");
+                });
+            }
             // Sign in with credential from the Google user.
             // [START auth_google_signin_credential]
             firebase.auth().signInWithCredential(credential).catch((error) => {
