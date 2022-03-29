@@ -7,16 +7,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>PUKARR</title>
   <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="./frontend//css/landing.css" />
+  <link rel="stylesheet" href="./css/landing.css" />
 </head>
 
 <body>
-  <!-- ALAN API -->
-  <div class="alan-btn"></div>
-
   <main class="main">
     <!-- Header -->
     <header class="header">
@@ -24,9 +18,9 @@
         <div class="logo">
           <a href="./index.html">
             <!-- <img
-                src="https://raw.githubusercontent.com/MohamedAridah/frontendmentor_url-shortening-api/main/images/logo.svg"
-                alt=""
-              /> -->
+                    src="https://raw.githubusercontent.com/MohamedAridah/frontendmentor_url-shortening-api/main/images/logo.svg"
+                    alt=""
+                  /> -->
             <h1>ResGrant</h1>
           </a>
         </div>
@@ -58,14 +52,14 @@
           One stop solution for students finding Research Grants in their
           domain.
         </p>
-        <a href="./frontend/signIn.html" class="btn btn-lg">Get Started</a>
+        <a href="./signIn.html" class="btn btn-lg">Get Started</a>
       </div>
       <div class="landing-image">
         <!-- <img
             src="https://raw.githubusercontent.com/MohamedAridah/frontendmentor_url-shortening-api/main/images/illustration-working.svg"
             alt="Working Illustration"
           /> -->
-        <img src="./frontend/images/illustration_1.svg" alt="Working Illustration" />
+        <img src="./images/illustration_1.svg" alt="Working Illustration" />
       </div>
     </section>
     <!-- Features -->
@@ -73,12 +67,13 @@
       <div class="container">
         <!-- Short URL Feature -->
         <div class="url-shorten-feature">
-          <form class="url-shorten-form" id="url-shorten-form">
+          <form class="url-shorten-form" id="Subscriptionform">
             <div>
-              <input type="text" class="url-input" placeholder="Subscribe for grant updates..." autocomplete="off" />
-              <span class="alert"></span>
+              <input type=" email" class="url-input" placeholder="Subscribe for grant updates..." autocomplete="off"
+                id="subscribedEmail" />
+              <!-- <span class="alert"></span> -->
             </div>
-            <button type="submit" class="btn btn-lg btn-plus-icon">
+            <button type="submit" class="btn btn-lg btn-plus-icon" id="submit">
               Subscribe
             </button>
           </form>
@@ -197,11 +192,10 @@
       <div class="container">
         <div class="section-header">
           <h2>Boost your Researches today!</h2>
-          <a href="./frontend/demo.html" class="btn btn-lg">Get Started</a>
+          <a href="#" class="btn btn-lg">Get Started</a>
         </div>
       </div>
     </section>
-    <!-- Footer -->
     <!-- Footer -->
     <footer class="footer" id="resources">
       <div class="container">
@@ -209,9 +203,9 @@
         <div class="logo">
           <a href="#">
             <!-- <img
-                  src="https://raw.githubusercontent.com/MohamedAridah/frontendmentor_url-shortening-api/main/images/logo.svg"
-                  alt=""
-                /> -->
+                src="https://raw.githubusercontent.com/MohamedAridah/frontendmentor_url-shortening-api/main/images/logo.svg"
+                alt=""
+              /> -->
             <h1 style="color: white">ResGrant</h1>
           </a>
         </div>
@@ -220,17 +214,17 @@
           <div class="links-group">
             <span>Features</span>
             <div>
-              <a href="./frontend/Events.html">Events</a>
-              <a href="./frontend/pricing.html">Pricing</a>
-              <!-- <a href="#">Analytics</a> -->
+              <a href="Events.html">Events</a>
+              <a href="pricing.html">Pricing</a>
+              <a href="#">Analytics</a>
             </div>
           </div>
           <div class="links-group">
             <span>Resources</span>
             <div>
-              <a href="./frontend/ReadMore.html">Blog</a>
-              <a href="./frontend/aboutUs.html">Developers</a>
-              <a href="./frontend/organization.html">Support</a>
+              <a href="#">Blog</a>
+              <a href="#">Developers</a>
+              <a href="organization.html">Support</a>
             </div>
           </div>
           <div class="links-group">
@@ -274,38 +268,19 @@
         by team<span class="outer-link">PUKARR</span>.
       </div>
     </footer>
-
   </main>
   <script src="https://unpkg.com/boxicons@2.1.2/dist/boxicons.js"></script>
-  <script type="text/javascript" src="https://studio.alan.app/web/lib/alan_lib.min.js"></script>
-  <script>
-    var alanBtnInstance = alanBtn({
-      key: "6071a925a2ce474dedcd3d545927f8722e956eca572e1d8b807a3e2338fdd0dc/stage",
-      onCommand: function (commandData) {
-        if (commandData.command === "getSignup") {
-          //call client code that will react on the received command
-          console.log("Dashboard");
-          window.location.replace("public/signUp.html");
-        }
-      },
-      rootEl: document.getElementById("alan-btn"),
-    });
-      // if (commandData.command === "getDashboard") {
-      //   console.log("Dashboard");
-      //   window.location.replace("/signUp.html");
-      // }
-  </script> <!-- firebase scripts -->
-  <script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-analytics.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-auth.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-firestore.js"></script>
-  <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
-  <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
-  <script src="./js/firebaseConfig.js"></script>
-  <script src="https://smtpjs.com/v3/smtp.js"></script>
-
-  <script src="./frontend/js/subscription.js"></script>
-
 </body>
+<!-- firebase scripts -->
+<script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-firestore.js"></script>
+<script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+<link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
+<script src="./js/firebaseConfig.js"></script>
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+
+<script src="./js/subscription.js"></script>
 
 </html>
