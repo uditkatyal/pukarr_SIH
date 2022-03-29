@@ -30,7 +30,7 @@ body {
 	font-size: 0.925rem;
 }
 
-h4[id="name"]{
+h4[id="name"] {
 	font-weight: bolder;
 	color: lightgray;
 }
