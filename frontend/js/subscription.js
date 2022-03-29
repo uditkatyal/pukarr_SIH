@@ -15,7 +15,6 @@ function getTnputValue(id) {
 }
 
 function sendEmail(subscribedUser, email) {
-    // let users = [subscribedUser];
     firebase.auth().onAuthStateChanged(function (user) {
         if (user) {
             for (let i = 0; i < subscribedUser.length; i++) {
@@ -24,7 +23,7 @@ function sendEmail(subscribedUser, email) {
                         Host: "smtp.gmail.com",
                         SecureToken: "4ac43b13-87bf-48c4-9968-cff89a276b5f",
                         To: email,
-                        From: "aashma.2008@gmail.com",
+                        From: "kashish.989392@gmail.com",
                         Subject: "Thankyou for contacting ResGrant",
                         Body: "We will reach out to you soon!"
                     }).then(function () {
