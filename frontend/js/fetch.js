@@ -17,7 +17,11 @@ firebase.auth().onAuthStateChanged(user => {
                         $("#Applications").text(data.Applications);
                         $("#offered").text(data.offered);
                         $("#awarded").text(data.awarded);
-                        $("#budget").text(data.budget+" %");
+                        var budg= data.budget;
+                        if(!budg)
+                            budg=33;
+                        console.log(budg);
+                        $("#budget").text(budg+" %");
                         $("#cons1").text(data.consultant1);
                         $("#cons2").text(data.consultant2);
 
