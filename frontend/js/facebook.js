@@ -4,7 +4,7 @@ function facebookProvider() {
     // [END auth_facebook_provider_create]
 
     // / [START auth_facebook_provider_scopes]
-    provider.addScope('user_birthday');
+    provider.addScope('public_profile, email, gender, user_birthday');
     // [END auth_facebook_provider_scopes]
 
     // [START auth_facebook_provider_params]
